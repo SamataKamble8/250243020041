@@ -30,5 +30,8 @@ public class User {
 	@JsonIgnoreProperties("user")
 	Role role;          //i.e rid -->foreign key
 	
-	@
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="cityid")
+	@JsonIgnoreProperties("user")
+	City city;         
 }
